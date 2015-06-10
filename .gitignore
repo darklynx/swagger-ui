@@ -3,6 +3,7 @@
 *.iml
 *.iws
 web/
+dist/
 lib/*.zip
 version.properties
 .sass-cache
