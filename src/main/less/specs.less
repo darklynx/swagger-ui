@@ -63,12 +63,17 @@
                 background-color: #f0f0f0;
             }
             tr {
-                td {
-                    padding: 6px;
+                td:not(.requestParam) {
+                    padding: 5px;
                     font-size: 0.9em;
                     border-bottom: 1px solid #cccccc;
                     vertical-align: top;
                     line-height: 1.3em;
+                }
+                td.requestParam {
+                    padding: 0px;
+                    border-bottom: 1px solid #cccccc;
+                    vertical-align: top;
                 }
             }
         }
@@ -344,7 +349,7 @@
     }
 
     .body-textarea {
-        width: 300px;
+        width: 350px;
         height: 100px;
         border: 1px solid #aaa;
     }
@@ -361,7 +366,7 @@
     }
 
     input.parameter {
-        width: 300px;
+        width: 350px;
         border: 1px solid #aaa;
     }
 
@@ -719,15 +724,16 @@
                                     clear: both;
                                     overflow: hidden;
                                     display: block;
+                                    text-align: right;
                                     a {
-                                        padding: 4px 0 0 10px;
+                                        padding: 4px 10px 0 0;
                                         display: inline-block;
                                         font-size: 0.9em;
                                     }
                                     input.submit {
                                         display: block;
                                         clear: none;
-                                        float: left;
+                                        float: right;
                                         padding: 6px 8px;
                                     }
                                     span.response_throbber {

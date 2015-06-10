@@ -1,3 +1,24 @@
+{{#if isRequest}}
+<td colspan="5" class="requestParam">
+    <table style="width: 100%">
+        <tbody>
+            <tr>
+                <td style="width: 100px; max-width: 100px; min-width: 100px" class="code"><label for="{{valueId}}">{{name}}</label></td>
+                <td style="width: 370px; max-width: 370px; min-width: 370px">
+                    <textarea class="body-textarea" readonly="readonly" name="{{name}}" id="{{valueId}}">{{default}}</textarea>
+                </td>
+                <td style="width: 270px; max-width: 270px; min-width: 270px"><span class="markdown">{{{description}}}</span></td>
+                <td style="width: 50px; max-width: 50px; min-width: 50px">{{{paramType}}}</td>
+                <td>Request Class</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h4>Request Class</h4>
+        <span class="model-signature"></span>
+    </div>
+</td>
+{{else}}
 <td class='code'><label for='{{valueId}}'>{{name}}</label></td>
 <td>
     {{#if isBody}}
@@ -13,3 +34,4 @@
 <td class="markdown">{{{description}}}</td>
 <td>{{{paramType}}}</td>
 <td><span class="model-signature"></span></td>
+{{/if}}
